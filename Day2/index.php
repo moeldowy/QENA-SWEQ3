@@ -31,5 +31,29 @@ foreach ($family1 as $key=>$member){
     echo "$key: $member"."<br>";
 }*/
 $family2=["Father"=>"ahmed","Sons"=>["son1"=>"mohammed","son2"=>"mahmoud"],"sibling"=>"ali"];
-echo $family2["Sons"]["son2"];
+//echo $family2["Sons"]["son2"];
 $family2=["Father"=>"ahmed","Sons"=>["mohammed","mahmoud"],"sibling"=>"ali"];
+/*
+ * global scoop [global]
+ * local scoop
+ * function (parameters) scoop
+ * static scoop
+ * */
+$age=25;//global scoop
+/*function addOneYear($age){
+    //$age=22;
+    //global $age;
+    return $age +1;
+}
+echo addOneYear(35);*/
+function addOneYear(){
+    static $age=22;
+    //global $age;
+    $age++;
+    return $age;
+
+}
+// Cron Job (Server Timer) -> run php script [echo addOneYear()."<hr>";]
+echo addOneYear()."<hr>";//call in 2021
+echo addOneYear()."<hr>";//call in 2022
+echo addOneYear()."<hr>";//call in 2023
