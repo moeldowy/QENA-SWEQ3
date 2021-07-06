@@ -31,7 +31,7 @@ foreach ($family1 as $key=>$member){
     echo "$key: $member"."<br>";
 }*/
 $family2=["Father"=>"ahmed","Sons"=>["son1"=>"mohammed","son2"=>"mahmoud"],"sibling"=>"ali"];
-//echo $family2["Sons"]["son2"];
+echo $family2["Sons"]["son2"];
 $family2=["Father"=>"ahmed","Sons"=>["mohammed","mahmoud"],"sibling"=>"ali"];
 /*
  * global scoop [global]
